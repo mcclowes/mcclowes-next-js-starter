@@ -1,0 +1,70 @@
+{
+  "name": "mcclowes-next-js-starter",
+  "version": "7.0.2",
+  "description": "A starter Next.js project with email and oAuth authentication, based on <https://github.com/iaincollins/nextjs-starter.git>",
+  "author": "Max Clayton Clowes <contact@mcclowes.com>",
+  "license": "ISC",
+  "repository": "https://github.com/mcclowes/mcclowes-next-js-starter.git",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "bootstrap": "^4.1.3",
+    "connect-mongo": "^2.0.3",
+    "cross-env": "^7.0.2",
+    "dotenv": "^6.2.0",
+    "express-session": "^1.15.5",
+    "ionicons": "^4.5.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.2.1",
+    "mongodb": "^3.1.10",
+    "nedb": "^1.8.0",
+    "next": "^9.4.2",
+    "next-auth": "^1.12.1",
+    "node-sass": "^4.12.0",
+    "nodemailer": "^4.7.0",
+    "nodemailer-direct-transport": "^3.3.2",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "popper.js": "^1.14.6",
+    "raw-loader": "^0.5.1",
+    "react": "^16.13.1",
+    "react-bootstrap-table": "^4.3.1",
+    "react-dom": "^16.13.1",
+    "react-syntax-highlighter": "^10.1.2",
+    "react-transition-group": "^2.5.1",
+    "reactstrap": "^6.5.0",
+    "sass-loader": "^7.1.0",
+    "universal-cookie": "^3.0.7"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development PORT=3000 node index.js",
+    "build": "next build",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+    "start": "node index.js",
+    "format": "pretty-quick --staged",
+    "format:all": "prettier --write 'src/**/*.js'",
+    "postinstall": "next build"
+  },
+  "engines": {
+    "node": "8.11.x"
+  }
+}
